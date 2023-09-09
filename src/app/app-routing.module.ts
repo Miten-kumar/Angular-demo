@@ -9,6 +9,11 @@ const routes: Routes = [
       path : '' , loadChildren: ()=>{
         return import('./announcement/announcement.module').then(m => m.AnnouncementModule)
       }
+    },
+    {
+      path : 'license' , loadChildren: ()=>{
+        return import('./license/license.module').then(m => m.LicenseModule)
+      }
     }
 ];
 

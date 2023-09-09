@@ -9,6 +9,8 @@ import { AnnouncementRoutingModule } from './announcement/announcement-routing.m
 import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { AnnouncementComponent } from './announcement/announcement.component';
+import { LicenseRoutingModule } from './license/license-routing.module';
+
 @NgModule({
   declarations: [AppComponent,AnnouncementComponent],
   
@@ -16,7 +18,7 @@ import { AnnouncementComponent } from './announcement/announcement.component';
   CommonModule,
     HttpClientModule,
     AgGridModule,
-    BrowserModule,
+    BrowserModule,LicenseRoutingModule,
     AppRoutingModule,
     RouterModule,
     AnnouncementRoutingModule,
