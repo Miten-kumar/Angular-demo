@@ -6,7 +6,7 @@ import {
   NgbModal,
   NgbModalRef,
 } from '@ng-bootstrap/ng-bootstrap';
-
+import { AgGridAngular } from 'ag-grid-angular';
 @Component({
   selector: 'app-announcement',
   templateUrl: './announcement.component.html',
@@ -16,6 +16,7 @@ import {
   styleUrls: ['./announcement.component.css'],
 })
 export class AnnouncementComponent {
+  @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
   @ViewChild('content', { static: false }) content: ElementRef | null = null;
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
     config.backdrop = 'static';
@@ -77,6 +78,8 @@ export class AnnouncementComponent {
   public defaultColDef: ColDef = {
     sortable: true,
     filter: true,
+    resizable: true,
+
   };
   rowData = [
     {
